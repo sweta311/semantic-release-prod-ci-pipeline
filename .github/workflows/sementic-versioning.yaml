@@ -2,7 +2,7 @@ name: Production Release
 
 on:
   push:
-    branches: [prod]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npx semantic-release --branches prod
+          npx semantic-release --branches main
 
       - name: Generate Unified Changelog
         run: node mergechangelog.js

@@ -1,12 +1,12 @@
 {
   "branches": [
     {
-      "name": "prod",
+      "name": "main",
       "channel": "latest",
-      "prerelease": "prod"
+      "prerelease": "main"
     }
   ],
-  "tagFormat": "v${version}-prod",
+  "tagFormat": "v${version}-main",
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "angular",
